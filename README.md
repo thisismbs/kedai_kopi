@@ -1,0 +1,2 @@
+1. Saat tombol "Kirim Pesanan" diklik dan form wajib diisi, data isian form akan muncul di URL. Hal tersebut terjadi karena form menggunakan method GET.
+2. Bagian daftar menu menggunakan elemen <nav> karena <nav> langsung memberi tahu browser bahwa teks tersebut adalah jalan utama untuk pindah halaman. Jika memakai <div>, browser hanya menganggapnya sebagai kotak biasa tanpa ada tujuan khusus.

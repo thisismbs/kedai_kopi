@@ -1,0 +1,362 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2D1E18;
+    background-color: #F7EFE6;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container, main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 2rem;
+}
+
+h1, h2, h3, h4 {
+    color: #2D1E18;
+    font-weight: 700;
+}
+
+h2, .page-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+}
+
+h3, .category-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+.site-header, header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(45, 30, 24, 0.1);
+    padding: 1.25rem 0;
+    margin-bottom: 2rem;
+}
+
+.header-container, header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo, header h1 {
+    font-size: 1.75rem;
+    color: #2D1E18;
+    text-align: center;
+    font-weight: 700;
+}
+
+.nav-menu, nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.nav-link, nav a {
+    text-decoration: none;
+    color: #2D1E18;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link:hover, nav a:hover,
+.nav-link.active, nav a.active {
+    color: #C86A37;
+}
+
+@media (min-width: 768px) {
+    .header-container, header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo, header h1 {
+        text-align: left;
+    }
+
+    .nav-menu, nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        gap: 1.5rem;
+    }
+}
+
+.card, .hero-section, .info-section {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(45, 30, 24, 0.12);
+    border-radius: 8px;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(45, 30, 24, 0.04);
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.hero-logo {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.info-section ul {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+}
+
+.info-section li {
+    margin-bottom: 0.5rem;
+}
+
+.menu-category {
+    margin-bottom: 2.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+@media (min-width: 600px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.menu-card {
+    background-color: #FFFFFF;
+    padding: 1.25rem;
+    border: 1px solid rgba(45, 30, 24, 0.12);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: 0 2px 6px rgba(45, 30, 24, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 30, 24, 0.08);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.menu-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.menu-card strong,
+.menu-card h4 {
+    color: #2D1E18;
+    font-size: 1.05rem;
+}
+
+.menu-price {
+    font-weight: 700;
+    color: #C86A37;
+}
+
+.menu-desc {
+    font-size: 0.95rem;
+    color: #2D1E18;
+    opacity: 0.9;
+}
+
+.order-form, form {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border: 1px solid rgba(45, 30, 24, 0.12);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(45, 30, 24, 0.04);
+    max-width: 600px;
+    margin: 1.5rem auto 2.5rem;
+}
+
+.form-group,
+form > div {
+    margin-bottom: 1.25rem;
+}
+
+form br {
+    display: none;
+}
+
+label, form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2D1E18;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid rgba(45, 30, 24, 0.2);
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #2D1E18;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #C86A37;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(200, 106, 55, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 480px) {
+    .radio-group {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-group label,
+.radio-item label,
+.radio-label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: #C86A37;
+    cursor: pointer;
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+button[type="submit"],
+.btn-submit {
+    display: inline-block;
+    width: 100%;
+    background-color: #C86A37;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover,
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+button[type="submit"]:active,
+.btn-submit:active {
+    transform: scale(0.99);
+}
+
+@media (min-width: 600px) {
+    button[type="submit"],
+    .btn-submit {
+        width: auto;
+    }
+}
+
+footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid rgba(45, 30, 24, 0.1);
+    padding: 1.5rem 0;
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #2D1E18;
+}

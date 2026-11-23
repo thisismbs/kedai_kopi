@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan - Kedai Kopi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <h1 class="logo">Kedai Kopi Malvin</h1>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="menu.html" class="nav-link">Daftar Menu</a>
+                <a href="pesan.html" class="nav-link active">Pesan</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h2 class="page-title">Form Pemesanan</h2>
+        <form action="pesan.html" method="get" class="order-form">
+            <div class="form-group">
+                <label for="nama">Nama pemesan:</label>
+                <input type="text" id="nama" name="nama" pattern="[A-Za-z\s]+" title="Hanya huruf dan spasi yang diizinkan" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="whatsapp">Nomor WhatsApp:</label>
+                <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]+" title="Hanya angka yang diizinkan" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pilihan_menu">Pilihan menu:</label>
+                <select id="pilihan_menu" name="menu">
+                    <option value="" disabled selected>-- Pilih menu di sini --</option>
+                    <option value="kopi_susu">Kopi Susu Gula Aren</option>
+                    <option value="americano">Americano Dingin</option>
+                    <option value="cappuccino">Cappuccino Hangat</option>
+                    <option value="matcha">Matcha Latte</option>
+                    <option value="cokelat">Cokelat Hangat</option>
+                    <option value="lemon_tea">Teh Lemon Es</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" name="jumlah" min="1" max="10" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label-title">Cara ambil:</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="ambil_tempat" name="cara_ambil" value="di_tempat" required>
+                        <label for="ambil_tempat">Ambil di tempat</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="diantar" name="cara_ambil" value="diantar" required>
+                        <label for="diantar">Diantar</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="catatan">Catatan (opsional):</label>
+                <textarea id="catatan" name="catatan" rows="4" cols="30"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Kirim Pesanan</button>
+        </form>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Alamat: Jl. Raya Bogor, Jawa Barat</p>
+        </div>
+    </footer>
+</body>
+</html>
